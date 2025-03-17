@@ -5,7 +5,9 @@ export const makePottery = (shape, weight, height) => {
     shape: shape,
     weight: weight,
     height: height,
-    primaryKey: primaryKey
+    primaryKey: primaryKey,
+    fired: false,
+    cracked: false
     }
     primaryKey++
     return pottery
