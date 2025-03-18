@@ -1,4 +1,4 @@
-const arr = []
+export const ObjToBeSold = []
 
 export const toSellOrNotToSell = (potteryObj) => {
   if(potteryObj.weight >= 6){
@@ -7,18 +7,19 @@ export const toSellOrNotToSell = (potteryObj) => {
   else if(potteryObj.weight < 6) {
     potteryObj.price = 20
   }
-  else if(potteryObj.cracked === true){
+
+
+  if(potteryObj.cracked === true){
     return "Not avalable for sell"
   }
-  else if(potteryObj.cracked === false){
-    arr.push(potteryObj)
+  else {
+    ObjToBeSold.push(potteryObj)
   }
-  else{
-    return "invalid object"
-  }
+
+
   return potteryObj
 }
 
 export const usePottery = () => {
-    arr.map()
+    return structuredClone(ObjToBeSold)
 }
